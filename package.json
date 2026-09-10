@@ -1,0 +1,31 @@
+{
+  "name": "bateponto",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "discloud:start": "npx prisma generate && npx prisma db push --accept-data-loss && npx prisma db seed && next build && next start -p 8080",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.x",
+    "bcryptjs": "^2.4.3",
+    "html2pdf.js": "^0.14.0",
+    "jose": "^5.2.3",
+    "next": "16.2.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3",
+    "prisma": "^5.x",
+    "tailwindcss": "^4"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
+}
